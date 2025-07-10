@@ -1,0 +1,59 @@
+.navbar {
+  background-color: #fff8f0;
+  box-shadow: 0 4px 12px rgba(230, 81, 0, 0.3);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container reset padding */
+.navbar .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Brand logo */
+.custom-brand {
+  font-size: 2.2rem !important; /* increased size */
+  line-height: 2.5rem !important; /* allows more vertical space */
+  font-weight: 700;
+  color: #bf360c;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  user-select: none;
+  position: relative;
+  z-index: 10;
+  cursor: default;
+}
+
+.custom-brand .text-success {
+  color: #e0340dee;
+}
+.half-color {
+  font-weight: bold;
+  font-size: 2rem;
+  background: linear-gradient(to right, #e0340dee 50%, green 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Rest of navbar links */
+.nav-link {
+  color: #4e342e;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #bf360c;
+  text-shadow: 0 0 5px rgba(191, 54, 12, 0.7);
+}
+
+.nav-link.active {
+  color: #bf360c;
+  font-weight: 700;
+}

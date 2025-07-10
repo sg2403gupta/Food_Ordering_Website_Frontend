@@ -1,0 +1,102 @@
+/* Full page background */
+.signup-page-wrapper {
+  min-height: 100vh;
+  background-color: #fff8f0; /* changed from image to color */
+  /* Removed background-image, background-size, background-position, background-repeat */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+/* Transparent, blurred signup card */
+.signup-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  max-width: 450px;
+  width: 100%;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 8px 32px rgba(191, 54, 12, 0.25);
+  color: #4e342e;
+}
+
+/* Headings */
+.brand-color {
+  color: #bf360c;
+}
+
+/* Input fields */
+.input-field {
+  border: 2px solid #bf360c;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.8);
+  color: #4e342e;
+}
+
+.input-field::placeholder {
+  color: #8d6e63;
+}
+
+.input-field:focus {
+  border-color: #ff9800;
+  box-shadow: 0 0 6px rgba(255, 152, 0, 0.5);
+  outline: none;
+  background: #fff;
+  color: #4e342e;
+}
+
+/* Buttons */
+.btn-orange {
+  background-color: #bf360c;
+  border: none;
+  color: #fff;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #ff9800;
+  color: #4e342e;
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.6);
+}
+
+/* Links */
+.text-orange {
+  color: #bf360c;
+  transition: color 0.3s ease;
+}
+
+.text-orange:hover {
+  color: #ff9800;
+}
+
+/* Error input styling */
+.input-error {
+  border-color: #d32f2f !important;
+  box-shadow: 0 0 6px rgba(211, 47, 47, 0.6);
+}
+
+.error-msg {
+  color: #d32f2f;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  font-weight: 600;
+}
+
+/* Responsive padding */
+@media (max-width: 480px) {
+  .signup-card {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.half-color {
+  font-weight: bold;
+  font-size: 2rem;
+  background: linear-gradient(to right, #e0340dee 50%, green 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}

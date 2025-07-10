@@ -1,0 +1,95 @@
+/* Full Banner Wrapper with Background Image */
+.adbanner-wrapper {
+  width: 100%;
+  height: 400px;
+  background-image: url("../assets/food/banner.jpg"); /* Set your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* border-radius: 12px; */
+  overflow: hidden;
+}
+
+/* Transparent dark overlay for entire poster */
+.adbanner-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Fully transparent overlay */
+  z-index: 1;
+}
+
+/* Content inside poster */
+.adbanner-content {
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  width: 90%;
+  max-width: 700px;
+}
+
+/* Headline text */
+.adbanner-title {
+  color: #ff9800;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(255, 152, 0, 0.7);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin-bottom: 1rem;
+}
+
+/* Description text */
+.adbanner-text {
+  color: #fff8f0;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+/* CTA Button */
+.adbanner-btn {
+  padding: 0.75rem 2rem;
+  background-color: transparent;
+  color: #ff9800;
+  border: 2px solid #ff9800;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.adbanner-btn:hover {
+  background-color: #ff9800;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(255, 152, 0, 0.6);
+}
+
+/* Responsive Height Adjustments */
+@media (max-width: 768px) {
+  .adbanner-wrapper {
+    height: 300px;
+  }
+
+  .adbanner-content {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .adbanner-wrapper {
+    height: 260px;
+  }
+
+  .adbanner-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}

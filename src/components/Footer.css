@@ -1,0 +1,68 @@
+.footer-section {
+  background-color: #fff8f0; /* warm light */
+  padding: 3rem 0 1.5rem;
+  margin-top: 3rem;
+  color: #4e342e; /* dark brown */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-top: 3px solid #ffccbc;
+}
+
+/* Brand logo */
+.footer-brand {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #cc451b;
+}
+
+.footer-brand .text-success {
+  color: #4e342e;
+}
+
+/* Headings */
+.footer-heading {
+  font-weight: 700;
+  color: #bf360c;
+  margin-bottom: 0.75rem;
+}
+
+/* Links */
+.footer-section a {
+  color: #8d6e63;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #bf360c;
+  text-shadow: 0 0 5px rgba(191, 54, 12, 0.3);
+}
+
+/* Icons */
+.footer-section .bi {
+  color: #4e342e;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-section .bi:hover {
+  color: #bf360c;
+  transform: scale(1.2);
+}
+
+/* Bottom note */
+.footer-bottom {
+  border-top: 1px solid #ffccbc;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  color: #8d6e63;
+  font-size: 0.875rem;
+}
+.half-color {
+  font-weight: bold;
+  font-size: 2rem;
+  background: linear-gradient(to right, #e0340dee 50%, green 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}

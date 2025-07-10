@@ -1,0 +1,135 @@
+.container {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Heading */
+h3.fw-bold {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #bf360c; /* deep orange */
+}
+
+/* Card styling */
+.card {
+  min-width: 280px;
+  max-width: 280px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(191, 54, 12, 0.3); /* deep orange shadow */
+  background: #fff8f0; /* very light warm background */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ffccbc;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(191, 54, 12, 0.6);
+  border-color: #bf360c;
+}
+
+/* Card image */
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 3px solid #bf360c; /* deep orange border */
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Card title */
+.card-title {
+  color: #4e342e; /* dark brown */
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Price text */
+.text-danger {
+  color: #bf360c !important; /* deep orange */
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Add to Cart button styling */
+.btn-add-cart {
+  background-color: #bf360c; /* deep orange */
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  margin-top: auto; /* push button to bottom */
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+}
+
+.btn-add-cart:hover {
+  background-color: #ff9800; /* lighter orange */
+  color: #4e342e; /* dark brown */
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.6);
+}
+
+/* Quantity controls container */
+.quantity-controls {
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+/* Quantity number text */
+.qty-text {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #4e342e;
+}
+
+/* Buttons styling for + and - */
+.btn-outline-success {
+  color: #4e342e; /* dark brown */
+  border-color: #4e342e;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+  min-width: 36px;
+  padding: 4px 0;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1;
+  border-radius: 6px;
+}
+
+.btn-outline-success:hover {
+  background-color: #bf360c !important; /* deep orange */
+  border-color: #bf360c !important;
+  color: #fff !important;
+}
+
+.btn-outline-danger {
+  color: #bf360c; /* deep orange */
+  border-color: #bf360c;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+  min-width: 36px;
+  padding: 4px 0;
+  text-align: center;
+  font-size: 1.25rem;
+  line-height: 1;
+  border-radius: 6px;
+}
+
+.btn-outline-danger:hover {
+  background-color: #4e342e !important; /* dark brown */
+  border-color: #4e342e !important;
+  color: #fff !important;
+}

@@ -1,0 +1,112 @@
+.doubleposter-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.doubleposter-wrapper {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.doubleposter-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 153, 0, 0.785);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Overlay Text Styling */
+.poster-text-overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+}
+
+.poster-text-overlay.left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.poster-text-overlay.right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.poster-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffccbc;
+  text-shadow: 1px 1px 4px #000;
+  margin-bottom: 0.5rem;
+}
+
+.poster-subtitle {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #fff3e0;
+  margin-bottom: 0.3rem;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.poster-desc {
+  font-size: 1.1rem;
+  color: #ffe0b2;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .poster-title {
+    font-size: 1.5rem;
+  }
+
+  .poster-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .poster-desc {
+    font-size: 1rem;
+  }
+
+  .poster-text-overlay {
+    padding: 1rem;
+    text-align: center !important;
+    align-items: center !important;
+  }
+}
+.learn-more-btn {
+  margin-top: 1rem;
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4);
+}
+
+.learn-more-btn:hover {
+  background-color: #fff3e0;
+  color: #bf360c;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 152, 0, 0.6);
+}
