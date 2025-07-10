@@ -7,18 +7,16 @@
 h3.fw-bold {
   margin-bottom: 1.5rem;
   font-weight: 700;
-  color: #bf360c; /* deep orange */
+  color: #bf360c;
 }
 
 /* Card styling */
 .card {
-  min-width: 280px;
-  max-width: 280px;
-  flex-shrink: 0;
+  width: 100%; /* ✅ Sab cards ko column width ke equal bana diya */
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(191, 54, 12, 0.3); /* deep orange shadow */
-  background: #fff8f0; /* very light warm background */
+  box-shadow: 0 4px 12px rgba(191, 54, 12, 0.3);
+  background: #fff8f0;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   cursor: pointer;
   display: flex;
@@ -33,74 +31,83 @@ h3.fw-bold {
   border-color: #bf360c;
 }
 
-/* Card image */
 .card-img-top {
   height: 180px;
   object-fit: cover;
-  border-bottom: 3px solid #bf360c; /* deep orange border */
+  border-bottom: 3px solid #bf360c;
   transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .card:hover .card-img-top {
   transform: scale(1.05);
 }
 
-/* Card title */
 .card-title {
-  color: #4e342e; /* dark brown */
+  color: #4e342e;
   font-weight: 700;
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* Price text */
+.card-text {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  color: #5d4037;
+  margin-bottom: 0.5rem;
+}
+
 .text-danger {
-  color: #bf360c !important; /* deep orange */
+  color: #bf360c !important;
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
-/* Add to Cart button styling */
 .btn-add-cart {
-  background-color: #bf360c; /* deep orange */
+  background-color: #bf360c;
   color: #fff;
   border: none;
   padding: 8px 16px;
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-  margin-top: auto; /* push button to bottom */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.1s ease;
+  margin-top: auto;
   width: 100%;
   text-align: center;
   display: inline-block;
 }
 
 .btn-add-cart:hover {
-  background-color: #ff9800; /* lighter orange */
-  color: #4e342e; /* dark brown */
+  background-color: #ff9800;
+  color: #4e342e;
   box-shadow: 0 4px 12px rgba(255, 152, 0, 0.6);
 }
 
-/* Quantity controls container */
+.btn-add-cart:active {
+  box-shadow: 0 2px 8px rgba(191, 54, 12, 0.5);
+  transform: scale(0.97);
+}
+
 .quantity-controls {
   gap: 10px;
   margin-top: 1rem;
 }
 
-/* Quantity number text */
 .qty-text {
   font-weight: 600;
   font-size: 1.1rem;
   color: #4e342e;
 }
 
-/* Buttons styling for + and - */
-.btn-outline-success {
-  color: #4e342e; /* dark brown */
-  border-color: #4e342e;
+.btn-outline-success,
+.btn-outline-danger {
   transition: background-color 0.3s ease, color 0.3s ease,
-    border-color 0.3s ease;
+    border-color 0.3s ease, transform 0.1s ease;
   min-width: 36px;
   padding: 4px 0;
   text-align: center;
@@ -109,27 +116,32 @@ h3.fw-bold {
   border-radius: 6px;
 }
 
+.btn-outline-success {
+  color: #4e342e;
+  border-color: #4e342e;
+}
+
 .btn-outline-success:hover {
-  background-color: #bf360c !important; /* deep orange */
+  background-color: #bf360c !important;
   border-color: #bf360c !important;
   color: #fff !important;
 }
 
+.btn-outline-success:active {
+  transform: scale(0.97);
+}
+
 .btn-outline-danger {
-  color: #bf360c; /* deep orange */
+  color: #bf360c;
   border-color: #bf360c;
-  transition: background-color 0.3s ease, color 0.3s ease,
-    border-color 0.3s ease;
-  min-width: 36px;
-  padding: 4px 0;
-  text-align: center;
-  font-size: 1.25rem;
-  line-height: 1;
-  border-radius: 6px;
 }
 
 .btn-outline-danger:hover {
-  background-color: #4e342e !important; /* dark brown */
+  background-color: #4e342e !important;
   border-color: #4e342e !important;
   color: #fff !important;
+}
+
+.btn-outline-danger:active {
+  transform: scale(0.97);
 }

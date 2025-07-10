@@ -14,8 +14,6 @@ import LoginPage from "./components/LoginPage";
 import SignupPage from "./components/SignupPage";
 import HorizontalFoodScroller from "./components/HorizontalFoodScroller";
 import TopRestaurants from "./components/TopRestaurants";
-
-// New Pages
 import ContactUs from "./components/ContactUs";
 import AboutUs from "./components/AboutUs";
 
@@ -51,7 +49,6 @@ function App() {
       <Navbar cartCount={cartItems.length} />
 
       <Routes>
-        {/* Home Page */}
         <Route
           path="/"
           element={
@@ -81,8 +78,6 @@ function App() {
             </>
           }
         />
-
-        {/* Other Pages */}
         <Route
           path="/checkout"
           element={
@@ -95,8 +90,6 @@ function App() {
         />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
-
-        {/* New Routes */}
         <Route path="/about" element={<AboutUs />} />
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
