@@ -1,33 +1,35 @@
-# 🍔 Food Ordering Website
+# 🍽️ Food Ordering Website
 
-A modern and responsive food ordering web application built using Vite and JavaScript (or React/Vue — update as per your stack). This project allows users to browse food menus, add items to the cart, and place orders easily.
+A modern and responsive food ordering web application built with **React JS**, **Bootstrap**, and **React Router**. Users can browse food items, add them to a cart, and place orders — all with a smooth single-page application (SPA) experience.
 
 ---
 
 ## 🚀 Features
 
-- 📝 Browse different food items and categories
-- 🛒 Add items to shopping cart
-- 💳 Checkout and place orders
-- ⚡ Fast and optimized with Vite
-- 💻 Responsive design (works on mobile, tablet, and desktop)
+- 🔥 Browse food menus by categories
+- 🛒 Add items to cart and manage cart contents
+- 💳 Checkout flow simulation
+- ⚡ Fast and smooth navigation using React Router
+- 🎨 Responsive and clean UI using Bootstrap
+- 💬 Dynamic routing for individual menu or product pages
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: JavaScript (or React / Vue)
-- **Build Tool**: Vite
-- **Styling**: CSS / Tailwind CSS (if used)
-- **Deployment**: (e.g., Vercel, Netlify — if you deploy)
+- **Frontend**: React JS
+- **Routing**: React Router
+- **Styling**: Bootstrap
+- **Build Tool**: Vite (or CRA if you used it — update as needed)
 
 ---
 
 ## ⚙️ Installation
 
 # Clone the repository
+git clone https://github.com/yourusername/food-ordering-website.git
 
-# Navigate into the folder
+# Navigate into the project directory
 cd food-ordering-website
 
 # Install dependencies
@@ -35,7 +37,6 @@ npm install
 
 # Start the development server
 npm run dev
-
 
 # React + Vite
 
