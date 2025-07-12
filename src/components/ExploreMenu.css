@@ -1,11 +1,9 @@
-/* Section Heading */
 .menu-heading {
   font-size: 2rem;
-  color: #bf360c; /* deep orange */
+  color: #bf360c;
   font-weight: 700;
 }
 
-/* Cuisine Button Styling */
 .btn-cuisine {
   background-color: transparent;
   color: #bf360c;
@@ -26,7 +24,6 @@
   border-color: #bf360c;
 }
 
-/* Responsive layout tweaks (optional) */
 @media (max-width: 576px) {
   .btn-cuisine {
     padding: 8px 18px;

@@ -1,15 +1,12 @@
-/* Full page background */
 .signup-page-wrapper {
   min-height: 100vh;
-  background-color: #fff8f0; /* changed from image to color */
-  /* Removed background-image, background-size, background-position, background-repeat */
+  background-color: #fff8f0;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1rem;
 }
 
-/* Transparent, blurred signup card */
 .signup-card {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
@@ -22,12 +19,10 @@
   color: #4e342e;
 }
 
-/* Headings */
 .brand-color {
   color: #bf360c;
 }
 
-/* Input fields */
 .input-field {
   border: 2px solid #bf360c;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -47,7 +42,6 @@
   color: #4e342e;
 }
 
-/* Buttons */
 .btn-orange {
   background-color: #bf360c;
   border: none;
@@ -61,7 +55,6 @@
   box-shadow: 0 4px 12px rgba(255, 152, 0, 0.6);
 }
 
-/* Links */
 .text-orange {
   color: #bf360c;
   transition: color 0.3s ease;
@@ -71,7 +64,6 @@
   color: #ff9800;
 }
 
-/* Error input styling */
 .input-error {
   border-color: #d32f2f !important;
   box-shadow: 0 0 6px rgba(211, 47, 47, 0.6);
@@ -84,7 +76,6 @@
   font-weight: 600;
 }
 
-/* Responsive padding */
 @media (max-width: 480px) {
   .signup-card {
     padding: 2rem 1.5rem;

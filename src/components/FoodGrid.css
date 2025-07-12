@@ -3,16 +3,14 @@
   padding-bottom: 3rem;
 }
 
-/* Heading */
 h3.fw-bold {
   margin-bottom: 1.5rem;
   font-weight: 700;
   color: #bf360c;
 }
 
-/* Card styling */
 .card {
-  width: 100%; /* ✅ Sab cards ko column width ke equal bana diya */
+  width: 100%;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(191, 54, 12, 0.3);

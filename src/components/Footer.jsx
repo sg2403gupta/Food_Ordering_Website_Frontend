@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css"; // Import the CSS file
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -87,7 +87,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          &copy; {new Date().getFullYear()} FoodExpress. All rights reserved.
+          &copy; {new Date().getFullYear()} 𝓒𝓵𝓲𝓬𝓴𝓝𝓒𝓱𝓸𝔀. All rights reserved.
         </div>
       </div>
     </footer>

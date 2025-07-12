@@ -6,14 +6,12 @@
   color: #bf360c;
 }
 
-/* Form card */
 .contact-form {
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(191, 54, 12, 0.2);
 }
 
-/* Input styling */
 .input-field {
   border: 2px solid #bf360c;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -25,7 +23,6 @@
   outline: none;
 }
 
-/* Button */
 .btn-orange {
   background-color: #bf360c;
   border: none;

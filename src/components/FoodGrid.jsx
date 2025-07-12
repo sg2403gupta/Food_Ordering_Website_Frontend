@@ -10,57 +10,59 @@ import food6 from "../assets/food/food6.jpg";
 import food7 from "../assets/food/food7.jpg";
 import food8 from "../assets/food/food8.jpg";
 
-const FoodGrid = ({ cuisine, cartItems, addToCart, updateQuantity }) => {
-  const items = [
-    {
-      name: "Paneer Tikka",
-      image: food1,
-      price: 150,
-      description: "Spicy grilled paneer cubes with veggies.",
-    },
-    {
-      name: "Chicken Biryani",
-      image: food2,
-      price: 200,
-      description: "Aromatic basmati rice with tender chicken.",
-    },
-    {
-      name: "Masala Dosa",
-      image: food3,
-      price: 100,
-      description: "Crispy dosa stuffed with spicy potato filling.",
-    },
-    {
-      name: "Veg Burger",
-      image: food4,
-      price: 120,
-      description: "Loaded with fresh veggies & tangy sauces.",
-    },
-    {
-      name: "Pasta Alfredo",
-      image: food5,
-      price: 180,
-      description: "Creamy pasta with rich Alfredo sauce.",
-    },
-    {
-      name: "Spring Rolls",
-      image: food6,
-      price: 90,
-      description: "Crispy rolls stuffed with veggies.",
-    },
-    {
-      name: "Tandoori Chicken",
-      image: food7,
-      price: 220,
-      description: "Spicy grilled chicken cooked in tandoor.",
-    },
-    {
-      name: "Gulab Jamun",
-      image: food8,
-      price: 80,
-      description: "Sweet soft balls soaked in sugar syrup.",
-    },
-  ];
+const defaultIndianItems = [
+  {
+    name: "Paneer Tikka",
+    image: food1,
+    price: 150,
+    description: "Spicy grilled paneer cubes with veggies.",
+  },
+  {
+    name: "Chicken Biryani",
+    image: food2,
+    price: 200,
+    description: "Aromatic basmati rice with tender chicken.",
+  },
+  {
+    name: "Masala Dosa",
+    image: food3,
+    price: 100,
+    description: "Crispy dosa stuffed with spicy potato filling.",
+  },
+  {
+    name: "Veg Burger",
+    image: food4,
+    price: 120,
+    description: "Loaded with fresh veggies & tangy sauces.",
+  },
+  {
+    name: "Pasta Alfredo",
+    image: food5,
+    price: 180,
+    description: "Creamy pasta with rich Alfredo sauce.",
+  },
+  {
+    name: "Spring Rolls",
+    image: food6,
+    price: 90,
+    description: "Crispy rolls stuffed with veggies.",
+  },
+  {
+    name: "Tandoori Chicken",
+    image: food7,
+    price: 220,
+    description: "Spicy grilled chicken cooked in tandoor.",
+  },
+  {
+    name: "Gulab Jamun",
+    image: food8,
+    price: 80,
+    description: "Sweet soft balls soaked in sugar syrup.",
+  },
+];
+
+const FoodGrid = ({ cuisine, items, cartItems, addToCart, updateQuantity }) => {
+  const foodItems = items || defaultIndianItems;
 
   const getQuantity = (name) => {
     const found = cartItems.find((item) => item.name === name);
@@ -71,7 +73,7 @@ const FoodGrid = ({ cuisine, cartItems, addToCart, updateQuantity }) => {
     <div className="container py-5">
       <h3 className="mb-4 fw-bold text-center">{cuisine} Dishes</h3>
       <div className="row g-4 justify-content-center">
-        {items.map((item, idx) => {
+        {foodItems.map((item, idx) => {
           const qty = getQuantity(item.name);
           return (
             <div

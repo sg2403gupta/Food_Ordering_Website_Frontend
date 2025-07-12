@@ -38,9 +38,7 @@ const LoginPage = () => {
     setErrors(newErrors);
 
     if (valid) {
-      // Proceed with login logic
       alert("Form submitted successfully!");
-      // Reset form or redirect etc.
     }
   };
 

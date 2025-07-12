@@ -63,9 +63,7 @@ const SignupPage = () => {
     setErrors(newErrors);
 
     if (valid) {
-      // Proceed with signup logic
       alert("Signup successful!");
-      // Reset form or redirect as needed
     }
   };
 

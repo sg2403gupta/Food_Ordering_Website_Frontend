@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 
 import slider1 from "../assets/food/slider1.jpg";
@@ -43,8 +43,31 @@ const PosterSlider = () => {
     },
   ];
 
+  const [index, setIndex] = useState(0);
+
+  // Auto slide every 2 seconds
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % posters.length);
+    }, 2000);
+
+    return () => clearInterval(timer); // Clean up on unmount
+  }, [posters.length]);
+
+  const handleSelect = (selectedIndex) => {
+    setIndex(selectedIndex);
+  };
+
   return (
-    <Carousel fade interval={3000} className="mb-4">
+    <Carousel
+      activeIndex={index}
+      onSelect={handleSelect}
+      fade
+      pause={false}
+      controls={false}
+      indicators={false}
+      className="mb-4"
+    >
       {posters.map((poster, idx) => (
         <Carousel.Item key={idx} className="carousel-item poster-wrapper">
           <img
@@ -53,13 +76,11 @@ const PosterSlider = () => {
             className="poster-img"
           />
           <div className="poster-overlay">
-            {/* LEFT SIDE: OFFER & TAGLINE */}
             <div className="poster-left-text">
               <h2 className="offer-heading">{poster.offer}</h2>
               <h3 className="food-heading">{poster.tagline}</h3>
             </div>
 
-            {/* RIGHT SIDE: DESCRIPTION */}
             <div className="poster-right-text">
               <p className="poster-desc">{poster.desc}</p>
             </div>

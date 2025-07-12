@@ -1,0 +1,97 @@
+.payment-container {
+  max-width: 450px;
+  margin: 40px auto;
+  background: #fff8f0;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(230, 81, 0, 0.25);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #4e342e;
+}
+
+.payment-title {
+  text-align: center;
+  color: #bf360c;
+  font-weight: 700;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  user-select: none;
+}
+
+.payment-form .form-label {
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: block;
+  color: #bf360c;
+}
+
+.payment-select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 2px solid #e0340dee;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.payment-select:focus {
+  border-color: #1b5e20;
+  outline: none;
+  box-shadow: 0 0 8px #1b5e20aa;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 2px solid #e0340dee;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #1b5e20;
+  box-shadow: 0 0 8px #1b5e20aa;
+}
+
+.mt-2 {
+  margin-top: 12px;
+}
+
+.mt-3 {
+  margin-top: 18px;
+}
+
+.mt-4 {
+  margin-top: 24px;
+}
+
+.card-details-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.small-input {
+  width: 48%;
+}
+
+.btn-pay {
+  background-color: #bf360c;
+  color: white;
+  width: 100%;
+  padding: 12px 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.btn-pay:hover {
+  background-color: #e0340dee;
+  color: #fff8f0;
+}

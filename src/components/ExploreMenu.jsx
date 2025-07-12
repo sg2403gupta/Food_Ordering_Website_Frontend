@@ -1,5 +1,5 @@
 import React from "react";
-import "./ExploreMenu.css"; // Make sure this path is correct
+import "./ExploreMenu.css";
 
 const cuisines = [
   "Italian",

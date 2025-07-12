@@ -1,7 +1,7 @@
 .checkout-container {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #4e342e; /* dark brown */
-  background: #fff8f0; /* very light warm */
+  color: #4e342e;
+  background: #fff8f0;
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 4px 12px rgba(191, 54, 12, 0.3),
@@ -9,18 +9,63 @@
 }
 
 .checkout-title {
-  color: #bf360c; /* deep orange-red */
+  color: #bf360c;
   font-weight: 700;
 }
 
-.empty-cart-text {
-  font-size: 1.2rem;
+.empty-cart-container {
+  text-align: center;
+  margin-top: 60px;
+  color: #bf360c;
+  user-select: none;
+}
+
+.empty-cart-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  color: #e0340dee;
+  animation: pulse 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+.empty-cart-message {
+  font-size: 1.15rem;
+  max-width: 420px;
+  margin: 0 auto 25px;
+  color: #4e342e;
+  line-height: 1.5;
+}
+
+.go-shopping-btn {
+  border-color: #bf360c;
   color: #bf360c;
   font-weight: 600;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.go-shopping-btn:hover {
+  background-color: #bf360c;
+  color: #fff8f0;
+  border-color: #bf360c;
+  box-shadow: 0 4px 15px rgba(191, 54, 12, 0.5);
 }
 
 .checkout-table thead tr {
-  background-color: #fce8dd; /* very light orange */
+  background-color: #fce8dd;
   color: #bf360c;
   font-weight: 700;
   border-bottom: 3px solid #e65100;
@@ -31,7 +76,7 @@
 }
 
 .checkout-row:hover {
-  background-color: #fff3e0; /* soft orange highlight */
+  background-color: #fff3e0;
   box-shadow: 0 4px 12px rgba(230, 81, 0, 0.3);
   border-radius: 8px;
 }
@@ -56,11 +101,10 @@
 }
 
 .text-danger {
-  color: #bf360c !important; /* deep orange-red */
+  color: #bf360c !important;
   font-weight: 600;
 }
 
-/* Quantity controls */
 .quantity-controls {
   gap: 0.5rem;
 }
@@ -83,7 +127,6 @@
   box-shadow: 0 6px 16px rgba(255, 152, 0, 0.7);
 }
 
-/* Remove button */
 .remove-btn {
   background-color: #d32f2f;
   border: none;
@@ -102,16 +145,14 @@
   color: #fff;
 }
 
-/* Total price styling */
 .total-price {
   color: #bf360c;
   font-weight: 700;
   font-size: 1.5rem;
 }
 
-/* Proceed to Payment button */
 .proceed-btn {
-  background-color: #4caf50; /* Bootstrap green */
+  background-color: #4caf50;
   border: none;
   color: white;
   font-weight: 700;

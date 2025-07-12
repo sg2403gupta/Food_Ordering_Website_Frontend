@@ -1,12 +1,11 @@
 import React from "react";
-import poster1 from "../assets/food/poster1.jpg"; // pizza
-import poster2 from "../assets/food/poster2.jpg"; // burger
+import poster1 from "../assets/food/poster1.jpg";
+import poster2 from "../assets/food/poster2.jpg";
 import "./DoublePoster.css";
 
 const DoublePoster = () => {
   return (
     <div className="doubleposter-container container py-4 d-flex flex-column flex-md-row gap-3">
-      {/* LEFT POSTER (Pizza) */}
       <div className="doubleposter-wrapper">
         <img src={poster1} alt="Pizza poster" className="doubleposter-img" />
         <div className="poster-text-overlay left">
@@ -19,7 +18,6 @@ const DoublePoster = () => {
         </div>
       </div>
 
-      {/* RIGHT POSTER (Burger) */}
       <div className="doubleposter-wrapper">
         <img src={poster2} alt="Burger poster" className="doubleposter-img" />
         <div className="poster-text-overlay right">

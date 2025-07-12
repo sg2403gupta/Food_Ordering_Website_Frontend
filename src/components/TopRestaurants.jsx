@@ -89,7 +89,7 @@ const TopRestaurants = () => {
   return (
     <div className="container py-5">
       <h3 className="mb-4 fw-bold" style={{ color: "#BF360C" }}>
-        Top 10 Restaurants in India
+        Top Restaurants
       </h3>
       <div className="horizontal-scroll d-flex gap-4 overflow-auto pb-3">
         {restaurants.map((rest, idx) => (

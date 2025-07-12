@@ -1,13 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./Navbar.css"; // Make sure this path is correct
+import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import Collapse from "bootstrap/js/dist/collapse";
+import "./Navbar.css";
 
 const Navbar = ({ cartCount }) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const collapseEl = document.getElementById("navbarContent");
+    if (collapseEl && collapseEl.classList.contains("show")) {
+      const bsCollapse =
+        Collapse.getInstance(collapseEl) || new Collapse(collapseEl);
+      bsCollapse.hide();
+    }
+  }, [location]);
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light sticky-top">
       <div className="container px-4">
-        {/* Logo without hover effect */}
-        <Link className="navbar-brand custom-brand " to="/">
+        <Link
+          className="navbar-brand custom-brand"
+          to="/"
+          aria-label="Go to homepage"
+        >
           <span className="text-danger">𝓒𝓵𝓲𝓬𝓴</span>
           <span className="half-color">𝓝</span>
           <span className="text-success">𝓒𝓱𝓸𝔀</span>
@@ -35,7 +50,6 @@ const Navbar = ({ cartCount }) => {
               className="form-control rounded-start"
               type="search"
               placeholder="Search food..."
-              aria-label="Search"
             />
             <button className="btn btn-danger rounded-end" type="submit">
               Search
@@ -43,37 +57,22 @@ const Navbar = ({ cartCount }) => {
           </form>
 
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0 gap-3 align-items-center">
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">
-                About Us
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link className="nav-link" to="/contact">
-                Contact Us
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link className="nav-link" to="/login">
-                Login
-              </Link>
-            </li>
-
-            <li className="nav-item">
-              <Link className="nav-link" to="/signup">
-                Sign Up
-              </Link>
-            </li>
+            {["about", "contact", "login", "signup"].map((path) => (
+              <li key={path} className="nav-item">
+                <Link className="nav-link" to={`/${path}`}>
+                  {path === "signup"
+                    ? "Sign Up"
+                    : path.charAt(0).toUpperCase() + path.slice(1)}
+                </Link>
+              </li>
+            ))}
 
             <li className="nav-item position-relative">
-              <Link className="nav-link" to="/checkout" aria-label="Cart">
+              <Link className="nav-link" to="/checkout">
                 <i className="bi bi-cart3"></i>
                 {cartCount > 0 && (
                   <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                     {cartCount}
-                    <span className="visually-hidden">items in cart</span>
                   </span>
                 )}
               </Link>
