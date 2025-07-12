@@ -20,7 +20,7 @@ Project Link: https://sg2403gupta.github.io/Food_Ordering_Website_Frontend/
 - **Frontend**: React JS
 - **Routing**: React Router
 - **Styling**: Bootstrap
-- **Build Tool**: Vite (or CRA if you used it — update as needed)
+- **Build Tool**: Vite
 
 ---
 
